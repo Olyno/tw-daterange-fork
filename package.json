@@ -1,6 +1,6 @@
 {
   "name": "tw-daterange-fork",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A date range picker component for React built using tailwind and date-fns",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
