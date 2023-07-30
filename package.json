@@ -1,47 +1,49 @@
 {
-  "name": "tw-daterange",
-  "version": "1.1.25",
-  "main": "./dist/DateRangePicker.umd.js",
-  "module": "./dist/DateRangePicker.es.js",
-  "license": "MIT",
-  "types": "./types/DateRangePicker.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/DateRangePicker.es.js",
-      "require": "./dist/DateRangePicker.umd.js"
-    }
-  },
+  "name": "tw-daterange-fork",
+  "version": "1.0.0",
   "description": "A date range picker component for React built using tailwind and date-fns",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/tw-daterange-fork/tw-daterange-fork.esm.js",
+  "homepage": "https://github.com/Olyno/tw-daterange-fork",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Olyno/tw-daterange-fork.git"
+  },
   "author": {
-    "name": "Swapnil Soni"
+    "name": "Olyno"
   },
-  "type": "module",
+  "contributors": [
+    "Swapnil Soni"
+  ],
+  "files": [
+    "dist/",
+    "loader/"
+  ],
   "scripts": {
-    "dev": "vite",
-    "build": "npm run clean && tsc && vite build",
-    "preview": "vite preview",
-    "clean": "git clean -Xfd -e \"!node_modules\" -e \"!node_modules/**\""
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
   },
-  "publishConfig": {
-    "access": "public"
-  },
-  "homepage": "https://github.com/SwapnilSoni1999/tw-daterange",
-  "peerDependencies": {
-    "react": ">=18",
-    "react-dom": ">=18",
-    "date-fns": ">=2.29.0"
+  "dependencies": {
+    "@stencil/core": "^4.0.0",
+    "date-fns": "^2.30.0"
   },
   "devDependencies": {
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "@vitejs/plugin-react-swc": "^3.0.0",
-    "autoprefixer": "^10.4.13",
-    "date-fns": "^2.29.3",
-    "postcss": "^8.4.21",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwindcss": "^3.2.7",
-    "typescript": "^4.9.3",
-    "vite": "^4.1.0"
-  }
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.11",
+    "jest": "^27.5.1",
+    "jest-cli": "^27.5.1",
+    "puppeteer": "^20.7.3",
+    "stencil-tailwind-plugin": "^1.8.0",
+    "tailwindcss": "^3.3.3"
+  },
+  "license": "MIT"
 }

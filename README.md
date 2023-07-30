@@ -1,69 +1,91 @@
-# tw-daterange
+# 📅 tw-daterange-fork 
 
-A DateRange picker made with tailwind and date-fns
+> A modern, sleek DateRange picker created with the power of Tailwind CSS and date-fns.
 
 ![tw-daterange](https://raw.githubusercontent.com/SwapnilSoni1999/tw-daterange/main/screenshot.png)
 
-<hr />
+---
 
-## How to install
+## Table of Contents
 
-1. Make sure you have [tailwind](https://tailwindcss.com) installed and setup
+- [📅 tw-daterange-fork](#-tw-daterange-fork)
+  - [Table of Contents](#table-of-contents)
+  - [🌟 Features ](#-features-)
+  - [🛠️ Installation ](#️-installation-)
+  - [📚 Usage ](#-usage-)
+  - [🙋 Contributing ](#-contributing-)
+  - [📜 License ](#-license-)
 
-2. using npm
+---
 
-```sh
-npm install tw-daterange
-```
+## 🌟 Features <a name="features"></a>
 
-using yarn
+Here is the list of improvements over the original:
 
-```sh
-yarn add tw-daterange
-```
+- **📦 Web Component:** Ready to integrate with popular frameworks such as React, Vue, Svelte, and many more.
+- **⚡ Fully Optimized:** Minified and tree-shakable for the best performance.
+- **✏️ Concise Code:** Clean and easy to understand or modify.
 
-3. Add the configuration to your _tailwind.config.js_
+## 🛠️ Installation <a name="installation"></a>
+
+Firstly, ensure [tailwind](https://tailwindcss.com) is installed and properly set up.
+
+Then, add `tw-daterange-fork` to your project using the package manager of your choice:
+
+<details>
+  <summary>Npm</summary>
+
+  ```shell
+  npm install tw-daterange-fork
+  ```
+</details>
+<details>
+  <summary>Yarn</summary>
+
+  ```shell
+  yarn add tw-daterange-fork
+  ```
+</details>
+<details>
+  <summary>Pnpm</summary>
+
+  ```shell
+  pnpm add tw-daterange-fork
+  ```
+</details>
+
+> The below part should be optional. Try without it first.
+
+Finally, don't forget to add the following configuration to your tailwind.config.js:
 
 ```js
 module.exports = {
   // ...
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
-    "./node_modules/tw-daterange/dist/index.esm.js",
+    "./node_modules/tw-daterange-fork/dist/index.esm.js",
   ],
   // ...
 }
 ```
 
-<hr />
+## 📚 Usage <a name="usage"></a>
 
-## How to use
+Here's a usage example:
 
-```tsx
-import { useState } from "react"
-import DateRangePicker from "tw-daterange"
-
-const App = () => {
-  const [range, setRange] = useState({
-    startDate: new Date(),
-    endDate: new Date(),
-  })
-
-  return (
-    <DateRangePicker
-      initialRange={range}
-      onUpdate={(dateRange) => {
-        setRange(dateRange)
-      }}
-    />
-  )
-}
-
-export default App
+```jsx
+<tw-daterange is-open="true" />
 ```
 
-<hr />
+Refer to [the component's documentation](./src/components/tw-daterange/readme.md) for more information.
 
-### License
+## 🙋 Contributing <a name="contributing"></a>
 
-MIT &copy; Swapnil Soni
+Contributions are always welcome!
+
+## 📜 License <a name="license"></a>
+
+This project is licensed under the terms of the MIT license.
+
+  * MIT © Olyno
+  * MIT © Swapnil Soni
